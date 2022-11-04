@@ -346,8 +346,8 @@ The image is supposed to fill out the card and is therefore 100%.
 
     .tre_kolonner_stor, .tre_kolonner_version2_stor {
         width: 50%;
-    }
 
+    }
 
     .tre_kolonner_lille1, .tre_kolonner_lille2, .tre_kolonner_version2_lille1, .tre_kolonner_version2_lille2 {
         width: 25%;
@@ -355,6 +355,16 @@ The image is supposed to fill out the card and is therefore 100%.
     .cards div{
         width:30%;
         margin-bottom:20px;
+    }
+
+    #sæsonkort a{
+        transition:2s;
+        border:2px solid white;
+    }
+
+    #sæsonkort a:hover{
+        background-color: rgb(210, 2, 2);
+        border:2px solid black;
     }
 
 }
