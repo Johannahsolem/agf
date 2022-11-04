@@ -297,7 +297,7 @@ The image is supposed to fill out the card and is therefore 100%.
         width: 100%;
     }
     .cards div{
-        width:90%;
+        width:50%;
         margin-bottom:10px;
     }
 
