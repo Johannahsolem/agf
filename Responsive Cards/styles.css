@@ -1,0 +1,359 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+main {
+    margin-top: 100px;
+}
+
+body section {
+    display: flex;
+}
+
+
+h1 {
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+/*IKON - NYHEDER*/
+h1 i {
+    margin-right: 20px;
+}
+
+
+h2{ 
+    font-size:1.4em;
+    font-weight: 400;
+    text-transform:uppercase;
+    font-weight:300;
+}
+
+h3 {
+    font-size: 20px;
+    color: white;
+    font-weight: 200;
+    padding: 0px 20px 0px 20px;
+    text-transform: uppercase;
+}
+
+h4 {
+    color: white;
+    margin: 20px;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+hr {
+    margin-bottom: 10px;
+}
+
+
+section img {
+    opacity: 0.8;
+    background-color: black;
+}
+
+
+/*Første sektion med stort billede og tekst*/
+
+.stort_billede {
+    background-image: url(images/agf_stort_forside.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 700px;
+    margin-bottom: 100px;
+}
+
+
+
+/*ARTIKEL OVERVIEW*/
+
+.tre_kolonner div, .tre_kolonner_version2 div {
+    height: 350px;
+    margin: 7px;
+    border-radius: 20px;
+}
+
+.tre_kolonner p, .tre_kolonner_version2 p {
+    margin-left: 20px; ;
+    font-size: 10px;
+    color: white;
+}
+
+/* HEADER: */
+header{
+    position:fixed;
+    top:0px;
+    width:100%;
+    height:100px;
+    z-index: 100;
+    
+    display:flex; /* For at kunne distribuere boksene inden i.*/
+    justify-content:space-around;
+    align-items:center;
+
+    background-color:rgb(23, 29, 53);
+    border-bottom:1px solid rgba(255,255,255,0.5); /* Den lille linje i bunden. */
+}
+
+/* Billeder skal fylde 100*% i deres container: 
+Logo og burger */
+#logo > img{
+    width:100%;
+}
+
+#navMobile > a > img{
+    width:100%; 
+}
+
+
+/*Stort billede med tekst - 1. sektion*/
+
+
+
+.stort_billede h2 {
+    color: white;
+    font-size: 3em;
+    font-weight: 900;
+}
+
+.stort_billede p {
+    color: white;
+
+}
+
+
+/*1.række af artikler*/
+
+.tre_kolonner_stor {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url(images/fodbold1.jpg);
+    background-size: cover
+}
+
+.tre_kolonner_lille1  {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url(images/fodbold2.webp) ;
+    background-size: cover;
+}
+
+.tre_kolonner_lille2 {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url(images/fodbold3.jpg) ;
+    background-size: cover;
+}
+
+
+/*2. række af artikler*/
+
+.tre_kolonner_version2_lille1 {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url(images/fodbold4.jpg) ;
+    background-size: cover;
+    background-color: black;
+}
+
+.tre_kolonner_version2_stor {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url(images/fodbold5.jpg) ;
+    background-size: cover;
+}
+
+.tre_kolonner_version2_lille2 {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url(images/fodbold6.jpg) ;
+    background-size: cover;
+}
+
+
+/*SÆSONKORT SEKTION*/
+
+
+/*Tekst*/
+
+
+#sæsonkort {
+    margin-top: 50px;
+    display: flex;
+}
+
+.sæsonkort_tekst {
+    padding-right: 50px;
+    padding-top: 50px;
+}
+
+#sæsonkort p {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    line-height: 1.5;
+}
+
+#sæsonkort img {
+    width: 100%;
+    height: auto;
+    border-radius:10px;
+    filter: brightness(50%);
+}
+
+#sæsonkort div {
+    width: 50%;
+}
+
+#sæsonkort a{ /* Knappen til at købe abonnement */
+    background-color:rgb(3, 3, 36);
+    font-size: 0.8em;
+    font-weight: 800;
+    border-radius:25px;
+    color:white;
+    padding:15px 20px 15px 20px;
+    text-decoration:none;
+    text-transform: uppercase;
+}
+
+
+
+/* CARDS: */
+/* This is the box that contains the cards. 
+Responsibility: 
+- Display the cards with flexbox, 
+- Use flex wrap to make the cards go underneath each other when there is too little space.
+- Fill out the entire browser window.
+*/
+.cards {
+    display:flex;
+    justify-content:space-around;
+    width:100%;
+    flex-wrap:wrap;
+    margin-top: 100px;
+}
+
+/* This is the card itself. 
+This set of rules is for all sections inside the section with the class 'cards'.
+They have a fixed width for the wrapping to work!
+The height can be temporary, but they are supposed to be the same height regardless of the content.
+*/
+.cards div{
+    width:500px;
+    padding-bottom:5px;
+
+    background-color:white;
+    border:1px solid white;
+    border-radius:10px;
+
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:black;
+    text-transform:uppercase;
+    text-align:center;
+
+}
+
+.cards div p, .cards div h2{
+    margin:15px;
+}
+
+/* This is for images inside the cards. 
+The image is supposed to fill out the card and is therefore 100%.
+*/
+.cards img{
+    width:100%;
+    
+}
+
+
+
+/* RESPONSIVE: */
+/* MOBIL: */
+@media screen and (max-width:910px){
+    /*Distribuer elementer anderledes:*/
+    header{
+        justify-content:space-between ;
+        padding-left:10px;
+        padding-right:10px;
+        
+    }
+    
+    /* Skjul laptopmenuen. */
+    #navLaptop {
+        display:none; 
+    }
+
+    /* Burgermenuen skal have en bredde */
+    #navMobile{ 
+        width:50px;
+    }
+
+    #logo{ /* Logoet skal være mindre på mobil. */
+        width:80px;
+    }    
+
+    .tre_kolonner, .tre_kolonner_version2 {
+        flex-direction: column;
+    }
+
+    .tre_kolonner div, .tre_kolonner_version2 div {
+        width: 100%;
+    }
+    .cards div{
+        width:90%;
+        margin-bottom:10px;
+    }
+
+}
+
+
+
+
+/* LAPTOP: */
+@media screen and (min-width: 910px){
+    /* HEADER: LOGO*/
+    #logo {/* Logoet. Er i en div fordi det spiller bedre med flexbox. */
+        width:200px;
+        margin:30px;
+        position:relative;
+        top:70px;
+    }
+
+    /* Skjul mobilmenuen.*/
+    #navMobile{
+        display:none;
+    }
+
+    /* Vis laptopmenuen og samtidig gør den til flex container. */
+    #navLaptop {
+        display:flex; 
+        justify-content:space-around;
+        width:70%;
+        gap:10px;
+    }
+
+    /* Tekstlinks: */
+    nav > a{
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        text-transform:uppercase;
+        color:white;
+        text-decoration:none;
+        font-size:15pt;
+        font-weight:bold;
+    }
+
+    .stort_billede div {
+        margin: 400px 0px 0px 200px;
+        width: 50%;
+    }
+
+    .tre_kolonner_stor, .tre_kolonner_version2_stor {
+        width: 50%;
+    }
+
+
+    .tre_kolonner_lille1, .tre_kolonner_lille2, .tre_kolonner_version2_lille1, .tre_kolonner_version2_lille2 {
+        width: 25%;
+    }
+    .cards div{
+        width:30%;
+        margin-bottom:20px;
+    }
+}
